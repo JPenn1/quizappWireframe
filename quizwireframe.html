@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Knowledge Quiz</title>
+<!--jquery here or in seperate page-->
+<scripts></scripts>
+    <!-- wireframe styles here-->
+    <style>
+        *. {
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+/* title card styling */
+       header{
+              background-color: light grey;
+              color:black;
+              padding:20px;
+              text-align:center;
+              border-bottom: 4px #000 solid;
+              margin-bottom: 10px; 
+              box-shadow: 0 0 10px 2px;
+              border-radius: 5px;
+              font-weight:bolder;
+              font-size:2.5rem;
+        }
+/*score & question number styling */
+        .counter {
+            display: inline-block;
+            justify-content: space-around;
+            font-size: 0.9em;
+  }
+/* backgroudn styling*/
+        body{
+             background-color: lightgrey;
+                          
+          }
+/*form styling */
+        .container{
+              margin: 0 auto;            
+              margin-top: 80px;
+              width: 800px;
+              max-width: 80%;
+              background-color:white;
+              padding: 10px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px 2px;
+              
+          }
+       
+       
+ /* button styling */  
+        .btn-layout{
+            display: flex;
+            margin-bottom: 0.5rem;
+            width:100%;
+            font-size: 1.8rem;
+            flex-direction: column;
+                    
+        }     
+        .btn{
+            border: 1px solid;
+            margin: 2px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            
+        }
+        .start-btn, .next-btn{
+            
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        
+/*attribute specific styling */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+ <!-- quiz title -->   
+    <header role="banner"id="quizTitle">Test Your Obscure Movie Knowledge</header>
+<!-- this records the score and current question position-->
+    <section role="score">
+            <ul>
+              <li class="counter">Question:
+                <span class="questionNumber">0</span>/10</li>
+              <li class="counter">Score:
+                <span class="scoreNumber">0</span>/100
+              </li>
+            </ul>
+          </section>
+    <div class="container">
+<!-- form element- with questions and answers-->        
+    <form id="quiz" class="justify-content flex-column">
+    <h2 id="question" class="text-center">What is the answer to this Question?</h2> 
+       
+    <div id="answer-buttons" class="btn-layout">
+    <button class="btn" id="answer1">Answer 1 </button>
+    <button class="btn" id="answer2">Answer 2 </button>
+    <button class="btn" id="answer3">Answer 3</button>
+    <button class="btn" id="answer4">Answer 4</button>
+    </>
+    </div>
+</form>
+</div> 
+<!-- control scheme, start button and next button-->
+<div id="controls" class="container text-center">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn">Next</button>
+<!-- correct answer screen below-->        
+    </div>
+ <div id="correctAnswer" class-"">
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+ </div>
+<!-- wrong answer screen below--> 
+ <div id="wrongAnswer" class-"">
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+ </div>
+ <!--results page (6-10 correct answers)-->
+ <div id="resultsGood" class-"">
+        <button id="retake-btn" class="retake-btn btn hide">Try Again!?</button>
+ </div>
+ <!--results page (1-5 correct answers)-->
+ <div id="resultsBad" class-"">
+        <button id="retake-btn" class="retake-btn btn hide">Try Again!?</button>
+ </div>
+ </body>
+
+</html>
+
